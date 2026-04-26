@@ -98,13 +98,12 @@ tailwind.config = {
   .ovl { letter-spacing: 0.22em; text-transform: uppercase; font-weight: 500; font-size: 0.7rem; }
   .ovl-sm { letter-spacing: 0.18em; text-transform: uppercase; font-weight: 500; font-size: 0.65rem; }
 
-  /* Logo-derived mark — recreates Jeff's actual logo:
-     gold / sage flanks / gold / sage center / gold / sage flanks / gold + spacer + baseline rule */
+  /* Logo-derived mark — recreates the H from Jeff's actual logo:
+     gold / sage flanks / gold / sage center / gold / sage flanks / gold */
   .hic-mark { display: inline-flex; flex-direction: column; align-items: center; }
   .hic-mark .bar { display: block; background: #C9A227; }
   .hic-mark .row { display: flex; align-items: center; justify-content: center; }
   .hic-mark .sage { display: block; background: #5C8C5A; }
-  .hic-mark .baseline-spacer { display: block; }
 
   /* Default (medium) */
   .hic-mark { gap: 5px; }
@@ -113,7 +112,6 @@ tailwind.config = {
   .hic-mark .sage { width: 28px; height: 7px; }
   .hic-mark .sage-mid { width: 50px; height: 7px; }
   .hic-mark .row.row-mid { gap: 0; }
-  .hic-mark .baseline-spacer { height: 8px; }
 
   /* Large (contact section) */
   .hic-mark-lg { gap: 9px; }
@@ -121,7 +119,6 @@ tailwind.config = {
   .hic-mark-lg .row { gap: 28px; width: 240px; height: 12px; }
   .hic-mark-lg .sage { width: 56px; height: 12px; }
   .hic-mark-lg .sage-mid { width: 96px; height: 12px; }
-  .hic-mark-lg .baseline-spacer { height: 14px; }
 
   /* Small (nav, section overlines) */
   .hic-mark-sm { gap: 2.5px; }
@@ -129,7 +126,6 @@ tailwind.config = {
   .hic-mark-sm .row { gap: 8px; width: 56px; height: 3px; }
   .hic-mark-sm .sage { width: 13px; height: 3px; }
   .hic-mark-sm .sage-mid { width: 22px; height: 3px; }
-  .hic-mark-sm .baseline-spacer { height: 4px; }
 
   /* Hairline rule */
   .rule { border-color: rgba(245, 239, 227, 0.12); }
@@ -209,8 +205,6 @@ tailwind.config = {
         <span class="bar"></span>
         <span class="row"><span class="sage"></span><span class="sage"></span></span>
         <span class="bar"></span>
-        <span class="baseline-spacer"></span>
-        <span class="bar"></span>
       </span>
       <span class="hidden sm:flex flex-col leading-none">
         <span class="font-display text-cream text-[15px] tracking-tight" style="font-variation-settings: 'opsz' 60, 'SOFT' 30, 'wght' 500;">Harkinson</span>
@@ -256,8 +250,6 @@ tailwind.config = {
             <span class="row row-mid"><span class="sage sage-mid"></span></span>
             <span class="bar"></span>
             <span class="row"><span class="sage"></span><span class="sage"></span></span>
-            <span class="bar"></span>
-            <span class="baseline-spacer"></span>
             <span class="bar"></span>
           </span>
           <span class="ovl text-gold">Texas Commercial Real Estate · Est. 1991</span>
@@ -354,8 +346,6 @@ tailwind.config = {
             <span class="bar"></span>
             <span class="row"><span class="sage"></span><span class="sage"></span></span>
             <span class="bar"></span>
-            <span class="baseline-spacer"></span>
-            <span class="bar"></span>
           </span>
           <span class="ovl text-gold">The Firm</span>
         </div>
@@ -393,8 +383,6 @@ tailwind.config = {
             <span class="row row-mid"><span class="sage sage-mid"></span></span>
             <span class="bar"></span>
             <span class="row"><span class="sage"></span><span class="sage"></span></span>
-            <span class="bar"></span>
-            <span class="baseline-spacer"></span>
             <span class="bar"></span>
           </span>
           <span class="ovl text-gold">By the Numbers</span>
@@ -474,8 +462,6 @@ tailwind.config = {
             <span class="row row-mid"><span class="sage sage-mid"></span></span>
             <span class="bar"></span>
             <span class="row"><span class="sage"></span><span class="sage"></span></span>
-            <span class="bar"></span>
-            <span class="baseline-spacer"></span>
             <span class="bar"></span>
           </span>
           <span class="ovl text-gold">The Founder · Profile</span>
@@ -619,8 +605,6 @@ tailwind.config = {
             <span class="bar"></span>
             <span class="row"><span class="sage"></span><span class="sage"></span></span>
             <span class="bar"></span>
-            <span class="baseline-spacer"></span>
-            <span class="bar"></span>
           </span>
           <span class="ovl text-gold">Selected Portfolio</span>
         </div>
@@ -760,8 +744,6 @@ tailwind.config = {
           <span class="bar"></span>
           <span class="row"><span class="sage"></span><span class="sage"></span></span>
           <span class="bar"></span>
-          <span class="baseline-spacer"></span>
-          <span class="bar"></span>
         </span>
         <span class="ovl text-gold">Operating Companies</span>
       </div>
@@ -772,8 +754,8 @@ tailwind.config = {
 
     <div class="grid md:grid-cols-2 gap-6 md:gap-10">
       <a href="https://www.harkinsondewancommercial.com/" target="_blank" rel="noopener" class="group block bg-bone hover:bg-[#1F1F1C] transition-colors border rule hover:border-gold/40 reveal overflow-hidden">
-        <div class="bg-cream p-6 md:p-10 flex items-center justify-center min-h-[180px] md:min-h-[220px]">
-          <img src="https://static.wixstatic.com/media/74012b_abb15972f12145c1b006880ff7a180d4~mv2.png/v1/fill/w_800,h_300,al_c,q_90,fit_pad/harkinson-dewan-logo.png" alt="Harkinson Dewan Commercial logo" class="max-h-28 md:max-h-36 w-auto object-contain" loading="lazy">
+        <div class="bg-cream py-12 px-8 md:py-16 md:px-12 flex items-center justify-center min-h-[260px] md:min-h-[320px]">
+          <img src="images/harkinson-dewan-logo.png" alt="Harkinson Dewan Commercial logo" class="max-h-44 md:max-h-52 w-auto object-contain" loading="lazy">
         </div>
         <div class="p-8 md:p-12">
         <div class="flex items-start justify-between gap-4 mb-8">
@@ -789,14 +771,14 @@ tailwind.config = {
         <div class="grid grid-cols-3 gap-4 pt-6 border-t rule">
           <div><div class="display-md text-gold text-2xl">200</div><div class="ovl-sm text-cream/45 mt-1">Tenants</div></div>
           <div><div class="display-md text-gold text-2xl">55<span class="text-base">y</span></div><div class="ovl-sm text-cream/45 mt-1">Combined</div></div>
-          <div><div class="display-md text-gold text-2xl">Tex.</div><div class="ovl-sm text-cream/45 mt-1">Statewide</div></div>
+          <div><div class="display-md text-gold text-2xl">Texas</div><div class="ovl-sm text-cream/45 mt-1">Statewide</div></div>
         </div>
         </div>
       </a>
 
       <a href="https://www.harkinsondevelopment.com/" target="_blank" rel="noopener" class="group block bg-bone hover:bg-[#1F1F1C] transition-colors border rule hover:border-sage/50 reveal overflow-hidden">
-        <div class="bg-cream p-6 md:p-10 flex items-center justify-center min-h-[180px] md:min-h-[220px]">
-          <img src="https://static.wixstatic.com/media/74012b_6786b554f54d4256989abb2d030745c3~mv2.jpg/v1/fill/w_800,h_300,al_c,q_90,fit_pad/harkinson-development-logo.jpg" alt="Harkinson Development logo" class="max-h-28 md:max-h-36 w-auto object-contain" loading="lazy">
+        <div class="bg-cream py-12 px-8 md:py-16 md:px-12 flex items-center justify-center min-h-[260px] md:min-h-[320px]">
+          <img src="images/harkinson-development-logo.jpg" alt="Harkinson Development logo" class="max-h-44 md:max-h-52 w-auto object-contain" loading="lazy">
         </div>
         <div class="p-8 md:p-12">
         <div class="flex items-start justify-between gap-4 mb-8">
@@ -833,8 +815,6 @@ tailwind.config = {
             <span class="row row-mid"><span class="sage sage-mid"></span></span>
             <span class="bar"></span>
             <span class="row"><span class="sage"></span><span class="sage"></span></span>
-            <span class="bar"></span>
-            <span class="baseline-spacer"></span>
             <span class="bar"></span>
           </span>
           <span class="ovl text-gold">Recent Activity</span>
@@ -903,8 +883,6 @@ tailwind.config = {
             <span class="bar"></span>
             <span class="row"><span class="sage"></span><span class="sage"></span></span>
             <span class="bar"></span>
-            <span class="baseline-spacer"></span>
-            <span class="bar"></span>
           </span>
         </div>
         <h2 class="display-xl text-cream text-[clamp(2.5rem,7vw,6rem)]">
@@ -946,8 +924,6 @@ tailwind.config = {
           <span class="row row-mid"><span class="sage sage-mid"></span></span>
           <span class="bar"></span>
           <span class="row"><span class="sage"></span><span class="sage"></span></span>
-          <span class="bar"></span>
-          <span class="baseline-spacer"></span>
           <span class="bar"></span>
         </span>
         <span>© 2026 Harkinson Investment Corporation. All rights reserved.</span>
