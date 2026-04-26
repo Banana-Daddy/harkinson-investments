@@ -98,38 +98,38 @@ tailwind.config = {
   .ovl { letter-spacing: 0.22em; text-transform: uppercase; font-weight: 500; font-size: 0.7rem; }
   .ovl-sm { letter-spacing: 0.18em; text-transform: uppercase; font-weight: 500; font-size: 0.65rem; }
 
-  /* Logo-derived mark — recreates the implied "H" from Jeff's actual logo:
-     pair of gold bars / sage flank row / gold bar / sage center row / gold bar / sage flank row / pair of gold bars */
+  /* Logo-derived mark — recreates Jeff's actual logo:
+     gold / sage flanks / gold / sage center / gold / sage flanks / gold + spacer + baseline rule */
   .hic-mark { display: inline-flex; flex-direction: column; align-items: center; }
   .hic-mark .bar { display: block; background: #C9A227; }
-  .hic-mark .pair { display: flex; flex-direction: column; }
   .hic-mark .row { display: flex; align-items: center; justify-content: center; }
   .hic-mark .sage { display: block; background: #5C8C5A; }
+  .hic-mark .baseline-spacer { display: block; }
 
   /* Default (medium) */
-  .hic-mark { gap: 4px; }
-  .hic-mark .pair { gap: 3px; }
+  .hic-mark { gap: 5px; }
   .hic-mark .bar { width: 120px; height: 2px; }
   .hic-mark .row { gap: 16px; width: 120px; height: 7px; }
   .hic-mark .sage { width: 28px; height: 7px; }
   .hic-mark .sage-mid { width: 50px; height: 7px; }
   .hic-mark .row.row-mid { gap: 0; }
+  .hic-mark .baseline-spacer { height: 8px; }
 
   /* Large (contact section) */
-  .hic-mark-lg { gap: 7px; }
-  .hic-mark-lg .pair { gap: 5px; }
+  .hic-mark-lg { gap: 9px; }
   .hic-mark-lg .bar { width: 240px; height: 3px; }
   .hic-mark-lg .row { gap: 28px; width: 240px; height: 12px; }
   .hic-mark-lg .sage { width: 56px; height: 12px; }
   .hic-mark-lg .sage-mid { width: 96px; height: 12px; }
+  .hic-mark-lg .baseline-spacer { height: 14px; }
 
   /* Small (nav, section overlines) */
-  .hic-mark-sm { gap: 2px; }
-  .hic-mark-sm .pair { gap: 1.5px; }
+  .hic-mark-sm { gap: 2.5px; }
   .hic-mark-sm .bar { width: 56px; height: 1px; }
   .hic-mark-sm .row { gap: 8px; width: 56px; height: 3px; }
   .hic-mark-sm .sage { width: 13px; height: 3px; }
   .hic-mark-sm .sage-mid { width: 22px; height: 3px; }
+  .hic-mark-sm .baseline-spacer { height: 4px; }
 
   /* Hairline rule */
   .rule { border-color: rgba(245, 239, 227, 0.12); }
@@ -202,13 +202,15 @@ tailwind.config = {
   <div class="mx-auto max-w-[1400px] px-5 md:px-10 py-4 md:py-5 flex items-center justify-between gap-6">
     <a href="#top" class="flex items-center gap-3 group" aria-label="Harkinson Investment Corporation home">
       <span class="hic-mark hic-mark-sm" aria-hidden="true">
-        <span class="pair"><span class="bar"></span><span class="bar"></span></span>
+        <span class="bar"></span>
         <span class="row"><span class="sage"></span><span class="sage"></span></span>
         <span class="bar"></span>
         <span class="row row-mid"><span class="sage sage-mid"></span></span>
         <span class="bar"></span>
         <span class="row"><span class="sage"></span><span class="sage"></span></span>
-        <span class="pair"><span class="bar"></span><span class="bar"></span></span>
+        <span class="bar"></span>
+        <span class="baseline-spacer"></span>
+        <span class="bar"></span>
       </span>
       <span class="hidden sm:flex flex-col leading-none">
         <span class="font-display text-cream text-[15px] tracking-tight" style="font-variation-settings: 'opsz' 60, 'SOFT' 30, 'wght' 500;">Harkinson</span>
@@ -248,13 +250,15 @@ tailwind.config = {
       <div class="max-w-[1100px]">
         <div class="flex items-center gap-3 mb-6 md:mb-8">
           <span class="hic-mark hic-mark-sm" aria-hidden="true">
-            <span class="pair"><span class="bar"></span><span class="bar"></span></span>
+            <span class="bar"></span>
             <span class="row"><span class="sage"></span><span class="sage"></span></span>
             <span class="bar"></span>
             <span class="row row-mid"><span class="sage sage-mid"></span></span>
             <span class="bar"></span>
             <span class="row"><span class="sage"></span><span class="sage"></span></span>
-            <span class="pair"><span class="bar"></span><span class="bar"></span></span>
+            <span class="bar"></span>
+            <span class="baseline-spacer"></span>
+            <span class="bar"></span>
           </span>
           <span class="ovl text-gold">Texas Commercial Real Estate · Est. 1991</span>
         </div>
@@ -343,13 +347,15 @@ tailwind.config = {
       <div class="md:col-span-4 reveal">
         <div class="flex items-center gap-3 mb-6">
           <span class="hic-mark hic-mark-sm" aria-hidden="true">
-            <span class="pair"><span class="bar"></span><span class="bar"></span></span>
+            <span class="bar"></span>
             <span class="row"><span class="sage"></span><span class="sage"></span></span>
             <span class="bar"></span>
             <span class="row row-mid"><span class="sage sage-mid"></span></span>
             <span class="bar"></span>
             <span class="row"><span class="sage"></span><span class="sage"></span></span>
-            <span class="pair"><span class="bar"></span><span class="bar"></span></span>
+            <span class="bar"></span>
+            <span class="baseline-spacer"></span>
+            <span class="bar"></span>
           </span>
           <span class="ovl text-gold">The Firm</span>
         </div>
@@ -381,13 +387,15 @@ tailwind.config = {
       <div>
         <div class="flex items-center gap-3 mb-5">
           <span class="hic-mark hic-mark-sm" aria-hidden="true">
-            <span class="pair"><span class="bar"></span><span class="bar"></span></span>
+            <span class="bar"></span>
             <span class="row"><span class="sage"></span><span class="sage"></span></span>
             <span class="bar"></span>
             <span class="row row-mid"><span class="sage sage-mid"></span></span>
             <span class="bar"></span>
             <span class="row"><span class="sage"></span><span class="sage"></span></span>
-            <span class="pair"><span class="bar"></span><span class="bar"></span></span>
+            <span class="bar"></span>
+            <span class="baseline-spacer"></span>
+            <span class="bar"></span>
           </span>
           <span class="ovl text-gold">By the Numbers</span>
         </div>
@@ -460,13 +468,15 @@ tailwind.config = {
       <div class="md:col-span-4 reveal">
         <div class="flex items-center gap-3 mb-6">
           <span class="hic-mark hic-mark-sm" aria-hidden="true">
-            <span class="pair"><span class="bar"></span><span class="bar"></span></span>
+            <span class="bar"></span>
             <span class="row"><span class="sage"></span><span class="sage"></span></span>
             <span class="bar"></span>
             <span class="row row-mid"><span class="sage sage-mid"></span></span>
             <span class="bar"></span>
             <span class="row"><span class="sage"></span><span class="sage"></span></span>
-            <span class="pair"><span class="bar"></span><span class="bar"></span></span>
+            <span class="bar"></span>
+            <span class="baseline-spacer"></span>
+            <span class="bar"></span>
           </span>
           <span class="ovl text-gold">The Founder · Profile</span>
         </div>
@@ -602,13 +612,15 @@ tailwind.config = {
       <div>
         <div class="flex items-center gap-3 mb-6">
           <span class="hic-mark hic-mark-sm" aria-hidden="true">
-            <span class="pair"><span class="bar"></span><span class="bar"></span></span>
+            <span class="bar"></span>
             <span class="row"><span class="sage"></span><span class="sage"></span></span>
             <span class="bar"></span>
             <span class="row row-mid"><span class="sage sage-mid"></span></span>
             <span class="bar"></span>
             <span class="row"><span class="sage"></span><span class="sage"></span></span>
-            <span class="pair"><span class="bar"></span><span class="bar"></span></span>
+            <span class="bar"></span>
+            <span class="baseline-spacer"></span>
+            <span class="bar"></span>
           </span>
           <span class="ovl text-gold">Selected Portfolio</span>
         </div>
@@ -741,13 +753,15 @@ tailwind.config = {
     <div class="reveal">
       <div class="flex items-center gap-3 mb-6">
         <span class="hic-mark hic-mark-sm" aria-hidden="true">
-          <span class="pair"><span class="bar"></span><span class="bar"></span></span>
+          <span class="bar"></span>
           <span class="row"><span class="sage"></span><span class="sage"></span></span>
           <span class="bar"></span>
           <span class="row row-mid"><span class="sage sage-mid"></span></span>
           <span class="bar"></span>
           <span class="row"><span class="sage"></span><span class="sage"></span></span>
-          <span class="pair"><span class="bar"></span><span class="bar"></span></span>
+          <span class="bar"></span>
+          <span class="baseline-spacer"></span>
+          <span class="bar"></span>
         </span>
         <span class="ovl text-gold">Operating Companies</span>
       </div>
@@ -813,13 +827,15 @@ tailwind.config = {
       <div>
         <div class="flex items-center gap-3 mb-6">
           <span class="hic-mark hic-mark-sm" aria-hidden="true">
-            <span class="pair"><span class="bar"></span><span class="bar"></span></span>
+            <span class="bar"></span>
             <span class="row"><span class="sage"></span><span class="sage"></span></span>
             <span class="bar"></span>
             <span class="row row-mid"><span class="sage sage-mid"></span></span>
             <span class="bar"></span>
             <span class="row"><span class="sage"></span><span class="sage"></span></span>
-            <span class="pair"><span class="bar"></span><span class="bar"></span></span>
+            <span class="bar"></span>
+            <span class="baseline-spacer"></span>
+            <span class="bar"></span>
           </span>
           <span class="ovl text-gold">Recent Activity</span>
         </div>
@@ -880,13 +896,15 @@ tailwind.config = {
       <div class="md:col-span-7 reveal">
         <div class="flex items-center gap-3 mb-8">
           <span class="hic-mark hic-mark-lg" aria-hidden="true">
-            <span class="pair"><span class="bar"></span><span class="bar"></span></span>
+            <span class="bar"></span>
             <span class="row"><span class="sage"></span><span class="sage"></span></span>
             <span class="bar"></span>
             <span class="row row-mid"><span class="sage sage-mid"></span></span>
             <span class="bar"></span>
             <span class="row"><span class="sage"></span><span class="sage"></span></span>
-            <span class="pair"><span class="bar"></span><span class="bar"></span></span>
+            <span class="bar"></span>
+            <span class="baseline-spacer"></span>
+            <span class="bar"></span>
           </span>
         </div>
         <h2 class="display-xl text-cream text-[clamp(2.5rem,7vw,6rem)]">
@@ -922,13 +940,15 @@ tailwind.config = {
     <div class="border-t rule pt-8 grid md:grid-cols-12 gap-6 text-xs text-cream/45">
       <div class="md:col-span-4 flex items-center gap-3">
         <span class="hic-mark hic-mark-sm" aria-hidden="true">
-          <span class="pair"><span class="bar"></span><span class="bar"></span></span>
+          <span class="bar"></span>
           <span class="row"><span class="sage"></span><span class="sage"></span></span>
           <span class="bar"></span>
           <span class="row row-mid"><span class="sage sage-mid"></span></span>
           <span class="bar"></span>
           <span class="row"><span class="sage"></span><span class="sage"></span></span>
-          <span class="pair"><span class="bar"></span><span class="bar"></span></span>
+          <span class="bar"></span>
+          <span class="baseline-spacer"></span>
+          <span class="bar"></span>
         </span>
         <span>© 2026 Harkinson Investment Corporation. All rights reserved.</span>
       </div>
