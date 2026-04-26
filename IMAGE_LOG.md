@@ -16,14 +16,14 @@ Per Zack's brief — **"Reuse all of his assets when possible"** — every image
 | `og.jpg` | Composed via Python PIL — `jeff-headshot.jpg` + brand-mark + headline text | Open Graph share preview (1200×630) |
 
 ### Hotlinked from Wix CDN (in HTML, not downloaded)
-- `5fa5ee_4692f9e7ed804fce8aff52b05bc92fb0` — Sherman Crossroads front elevation
-- `5fa5ee_4d4dc6a225e847dbb67184af48ee3b17` — Colony Hard 8
-- `74012b_6786b554f54d4256989abb2d030745c3` — Huntington Square (assigned)
-- `74012b_75c26f3500c04ad397a290ae6e9fa666` — Bosque River Centre (assigned)
-- `74012b_a3c2bd2108144d87ba5f004da11ce8e3` — Parker Plaza West (assigned)
-- `74012b_b8faa67bf51e4e3d879bde45056b9a85` — Aston Junction (assigned)
+Mappings verified against the source filenames in the Wix CDN URLs (e.g. `Sherman%20Junction%20Layout`, `Huntington%20Square%20Collage`, `Aerial%20Photo%20Bosque`).
 
-> **Note on assignment**: the homepage harvest pulled 8 unique Wix CDN images but they aren't labeled on the source. I assigned them to portfolio cards based on visual fit. If any are mislabeled, swap the URLs and re-push (REFIT mode).
+- `74012b_d95f1137c18c49379305e4adcbc011ef` — Sherman Crossroads (site plan layout)
+- `74012b_fcc5ed66e2b6442b843f510c3fc1b89c` — Huntington Square (storefront collage)
+- `74012b_a3c2bd2108144d87ba5f004da11ce8e3` — Bosque River Centre (aerial photo)
+- `74012b_75c26f3500c04ad397a290ae6e9fa666` — Parker Plaza West (east elevation rendering)
+- `5fa5ee_4d4dc6a225e847dbb67184af48ee3b17` — Colony Hard 8 (The Colony aerial map)
+- `5fa5ee_4692f9e7ed804fce8aff52b05bc92fb0` — Aston Junction (LOT-30 front elevation)
 
 ## Total Cost
 **$0.00** — no AI generation, no QA calls, no API spend.
